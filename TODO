@@ -1,0 +1,41 @@
+TODO:
+  ☐ コンポーネント・STATEを計画する
+  ☐ リダイレクトを計画する
+
+最後に対応:
+  ☐ mixinsにまとめるスクリプトあるか検討
+  ☐ 最後にVScodeまわりの修正あれば「00」のほうにコピーしておく
+
+Archive:
+
+Memo:
+  ■■■ 参考 ■■■
+
+  ■■■ 反省など ■■■
+
+
+
+Todo:
+  ☐ Item
+  ✔ Item @done(20-09-25 23:07)
+  ✘ Item @cancelled(20-09-25 23:07)
+
+Todo2:
+  ☐ Item @critical
+  ☐ Item @high
+  ☐ Item @today
+  ☐ Item @low
+
+Todo3:
+  ☐ Item @3d
+  ☐ Item @3h
+  ☐ Item @2h
+  ☐ Item @3m
+
+Archive:
+
+
+使い方参考
+https://fereria.github.io/reincarnation_tech/98_Other/VSCode/vscode_task/
+
+Todo:Open Embedded　タスクリストの作成
