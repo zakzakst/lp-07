@@ -1,6 +1,16 @@
 TODO:
-  ☐ コンポーネント・STATEを計画する
-  ☐ リダイレクトを計画する
+  ✔ WPからの取得データ計画 @done(20-10-27 07:16)
+  ✔ metaデータの設定 @done(20-10-28 03:07)
+  ✔ 構造化データの設定 @done(20-10-28 03:07)
+  ✔ envファイルの設定 @done(20-10-28 03:08)
+  ☐ ページ遷移時の「asyncData」内で「process.env」が挙動しない
+  ☐ envファイル、テスト環境と出し分け
+  ☐ SCSSのコンパイルをscopedで行えるようにする
+  ☐ bootstrapカスタマイズ
+  ☐ GAの設定
+  ☐ PWAの実装確認
+  ☐ client-onlyの「fetch as google」「googleオプティマイズ」との兼ね合い調査
+  ☐ 現在地情報の取得
 
 最後に対応:
   ☐ mixinsにまとめるスクリプトあるか検討
@@ -10,32 +20,8 @@ Archive:
 
 Memo:
   ■■■ 参考 ■■■
+  ・HTML要素にlang属性をつける
+  https://syon.github.io/til/2018/10/27/nuxt-html-attrs/
+  →でもnuxt.configのほうにつけても上手くいかなかった
 
   ■■■ 反省など ■■■
-
-
-
-Todo:
-  ☐ Item
-  ✔ Item @done(20-09-25 23:07)
-  ✘ Item @cancelled(20-09-25 23:07)
-
-Todo2:
-  ☐ Item @critical
-  ☐ Item @high
-  ☐ Item @today
-  ☐ Item @low
-
-Todo3:
-  ☐ Item @3d
-  ☐ Item @3h
-  ☐ Item @2h
-  ☐ Item @3m
-
-Archive:
-
-
-使い方参考
-https://fereria.github.io/reincarnation_tech/98_Other/VSCode/vscode_task/
-
-Todo:Open Embedded　タスクリストの作成
