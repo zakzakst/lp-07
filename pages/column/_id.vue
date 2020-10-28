@@ -7,12 +7,16 @@
 </template>
 
 <script>
+import columnItemsDetail from '@/static/wp-json/column-items-detail.json';
 import mixinMeta from '@/mixins/meta'
 
 export default {
-  async asyncData({ $axios, params }) {
-    const res = await $axios.get(`${process.env.COLUMN_ITEM_API}${params.id}.json`);
-    return res.data;
+  // async asyncData({ $axios, params }) {
+  //   const res = await $axios.get(`${process.env.COLUMN_ITEM_API}${params.id}.json`);
+  //   return res.data;
+  // },
+  data() {
+    return columnItemsDetail[this.$route.params.id]
   },
   computed: {
     meta() {

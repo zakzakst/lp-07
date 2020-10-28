@@ -1,22 +1,23 @@
 TODO:
-  ✔ WPからの取得データ計画 @done(20-10-27 07:16)
-  ✔ metaデータの設定 @done(20-10-28 03:07)
-  ✔ 構造化データの設定 @done(20-10-28 03:07)
-  ✔ envファイルの設定 @done(20-10-28 03:08)
-  ☐ ページ遷移時の「asyncData」内で「process.env」が挙動しない
-  ☐ envファイル、テスト環境と出し分け
   ☐ SCSSのコンパイルをscopedで行えるようにする
   ☐ bootstrapカスタマイズ
   ☐ GAの設定
   ☐ PWAの実装確認
   ☐ client-onlyの「fetch as google」「googleオプティマイズ」との兼ね合い調査
   ☐ 現在地情報の取得
+  ☐ ページ遷移時の「asyncData」内で「process.env」が挙動しない→一旦保留
+  ☐ envファイル、テスト環境と出し分け→一旦保留
 
 最後に対応:
   ☐ mixinsにまとめるスクリプトあるか検討
   ☐ 最後にVScodeまわりの修正あれば「00」のほうにコピーしておく
 
 Archive:
+  ✔ WPからの取得データ計画 @done(20-10-27 07:16) @project(TODO)
+  ✔ metaデータの設定 @done(20-10-29 02:44) @project(TODO)
+  ✔ 構造化データの設定 @done(20-10-28 03:07) @project(TODO)
+  ✔ envファイルの設定 @done(20-10-28 03:08) @project(TODO)
+  ✔ 静的HTMLのルーティング設定 @done(20-10-29 02:41) @project(TODO)
 
 Memo:
   ■■■ 参考 ■■■
