@@ -1,0 +1,47 @@
+{
+  "1": {
+    "id": 1,
+    "date": 20201027,
+    "categories": [
+      "test",
+      "test2",
+      "test3"
+    ],
+    "title": "コラム1",
+    "description": "コラム1の概要",
+    "keywords": "コラム1のキーワード1,コラム1のキーワード2",
+    "content": "<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>",
+    "mainImg": "/path/to/img.jpg",
+    "ogImg": "/path/to/ogp.png"
+  },
+  "2": {
+    "id": 2,
+    "date": 20201027,
+    "categories": [
+      "test",
+      "test2",
+      "test3"
+    ],
+    "title": "コラム2",
+    "description": "コラム2の概要",
+    "keywords": "コラム2のキーワード1,コラム2のキーワード2",
+    "content": "<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>",
+    "mainImg": "/path/to/img.jpg",
+    "ogImg": "/path/to/ogp.png"
+  },
+  "3": {
+    "id": 3,
+    "date": 20201027,
+    "categories": [
+      "test",
+      "test2",
+      "test3"
+    ],
+    "title": "コラム3",
+    "description": "コラム3の概要",
+    "keywords": "コラム3のキーワード1,コラム3のキーワード2",
+    "content": "<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>",
+    "mainImg": "/path/to/img.jpg",
+    "ogImg": "/path/to/ogp.png"
+  }
+}

@@ -11,15 +11,18 @@
 </template>
 
 <script>
+import columnItems from '@/static/wp-json/column-items.json';
+
 export default {
-  async asyncData({ $axios }) {
-    const res = await $axios.get(process.env.COLUMN_ITEMS_API);
-    return {
-      columnItems: res.data
-    }
-  },
+  // async asyncData({ $axios }) {
+  //   const res = await $axios.get(process.env.COLUMN_ITEMS_API);
+  //   return {
+  //     columnItems: res.data
+  //   }
+  // },
   data () {
     return {
+      columnItems: columnItems
     }
   },
   head() {

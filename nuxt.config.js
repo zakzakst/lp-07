@@ -1,3 +1,6 @@
+// 動的ルーティング用のデータ読み込み
+const columnItems = require('./static/wp-json/column-items.json')
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -60,5 +63,14 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+  },
+
+  // 動的ルーティングの追加
+  generate: {
+    routes() {
+      return columnItems.map(item => {
+        return `/column/${item.id}`
+      })
+    }
+  },
 }
