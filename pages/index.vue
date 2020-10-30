@@ -1,17 +1,19 @@
 <template>
   <div>
-    <ul>
+    <!-- <ul>
       <li v-for="item in columnItems" :key="item.id">
         <nuxt-link :to="`/column/${item.id}`">
           {{ item.date }}：{{ item.description }}
         </nuxt-link>
       </li>
-    </ul>
+    </ul> -->
+    <gallery />
   </div>
 </template>
 
 <script>
 import columnItems from '@/static/wp-json/column-items.json';
+import Gallery from '@/components/Gallery'
 
 export default {
   // async asyncData({ $axios }) {
@@ -24,6 +26,9 @@ export default {
     return {
       columnItems: columnItems
     }
+  },
+  components: {
+    Gallery,
   },
   head() {
     const jsonld = {

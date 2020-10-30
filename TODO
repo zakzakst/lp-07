@@ -13,6 +13,7 @@ TODO:
   ☐ 最後にVScodeまわりの修正あれば「00」のほうにコピーしておく
 
 Archive:
+  ✔ flickerで画像の読み込みスクリプト @done(20-10-30 19:38) @project(TODO)
   ✔ WPからの取得データ計画 @done(20-10-27 07:16) @project(TODO)
   ✔ metaデータの設定 @done(20-10-29 02:44) @project(TODO)
   ✔ 構造化データの設定 @done(20-10-28 03:07) @project(TODO)
