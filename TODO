@@ -1,5 +1,10 @@
 TODO:
+  ☐ WPの子テーマ設定
+  ☐ WPのカスタム投稿「cat」設定
+  ☐ WPのrest api設定
+  ☐ CROS対応がサーバー側で必要だったら対応
   ☐ SCSSのコンパイルをscopedで行えるようにする
+  ☐ gzip
   ☐ bootstrapカスタマイズ
   ☐ GAの設定
   ☐ PWAの実装確認
@@ -25,5 +30,8 @@ Memo:
   ・HTML要素にlang属性をつける
   https://syon.github.io/til/2018/10/27/nuxt-html-attrs/
   →でもnuxt.configのほうにつけても上手くいかなかった
+
+  ・WP REST APIのカスタムエンドポイント
+  https://knowledge.cpi.ad.jp/cms/wp-rest-api2/
 
   ■■■ 反省など ■■■
