@@ -1,5 +1,6 @@
 // 動的ルーティング用のデータ読み込み
-const columnItems = require('./static/wp-json/column-items.json')
+// const columnItems = require('./static/wp-json/column-items.json')
+import axios from 'axios'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -70,8 +71,13 @@ export default {
   // 動的ルーティングの追加
   generate: {
     routes() {
-      return columnItems.map(item => {
-        return `/column/${item.id}`
+      // return columnItems.map(item => {
+      //   return `/column/${item.id}`
+      // })
+      return axios.get(process.env.COLUMN_ITEMS_API).then(res => {
+        return res.data.map(column => {
+          return '/column/' + column.id
+        })
       })
     }
   },
