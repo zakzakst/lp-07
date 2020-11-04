@@ -59,6 +59,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
+    '@nuxtjs/sitemap',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -79,6 +80,26 @@ export default {
           return '/column/' + column.id
         })
       })
+    }
+  },
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: process.env.SITE_DOMAIN,
+    gzip: true,
+    // exclude: [
+    //   '/path'
+    // ],
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date()
+    },
+    routes: async () => {
+      const res = await axios.get(process.env.COLUMN_ITEMS_API);
+      return res.data.map(column => {
+        return '/column/' + column.id
+      });
     }
   },
 }
