@@ -1,22 +1,29 @@
 <template>
   <div>
     <p>{{ id }}</p>
-    <p>{{ date }}</p>
-    <p>{{ title }}</p>
+    <p>日付：{{ date }}</p>
+    <p>タイトル：{{ title }}</p>
+    <div v-html="content"></div>
+    <ul v-if="categories">
+      <li v-for="category in categories" :key="category">{{ category }}</li>
+    </ul>
+    <nuxt-link to="/">TOP</nuxt-link>
+    <nuxt-link to="/column">コラム一覧</nuxt-link>
+    <img :src="mainImg" alt="">
   </div>
 </template>
 
 <script>
-import columnItemsDetail from '@/static/wp-json/column-items-detail.json';
+// import columnItemsDetail from '@/static/wp-json/column-items-detail.json';
 import mixinMeta from '@/mixins/meta'
 
 export default {
-  // async asyncData({ $axios, params }) {
-  //   const res = await $axios.get(`${process.env.COLUMN_ITEM_API}${params.id}.json`);
-  //   return res.data;
-  // },
+  async asyncData({ $axios, params }) {
+    const res = await $axios.get(process.env.COLUMN_ITEM_API + params.id);
+    return res.data;
+  },
   data() {
-    return columnItemsDetail[this.$route.params.id]
+    // return columnItemsDetail[this.$route.params.id]
   },
   computed: {
     meta() {
@@ -25,7 +32,7 @@ export default {
         description: this.description,
         keywords: this.keywords,
         ogUrl: process.env.SITE_DOMAIN + process.env.SITE_PATH + this.$route.path,
-        ogImage: this.ogImg ? process.env.SITE_DOMAIN + process.env.SITE_PATH + this.ogImg : '',
+        ogImage: this.ogpImg ? this.ogpImg : '',
         breadcrumbs: [
           {
             url: process.env.SITE_DOMAIN + process.env.SITE_PATH + '/',
