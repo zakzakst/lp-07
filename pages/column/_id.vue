@@ -9,7 +9,10 @@
     </ul>
     <nuxt-link to="/">TOP</nuxt-link>
     <nuxt-link to="/column">コラム一覧</nuxt-link>
-    <img :src="mainImg" alt="">
+    <picture>
+      <source type="image/webp" :srcset="`${mainImg}.webp`">
+      <img :src="mainImg">
+    </picture>
   </div>
 </template>
 

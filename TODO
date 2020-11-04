@@ -1,9 +1,9 @@
 TODO:
-  ☐ WPの画像最適化プラグイン試す（WebP形式試す。そのあとlighthouseのスコアの違い確認 ※SEOに影響出そうか）
   ☐ firebase hosting側で利用すればCDNみたいになるかもしれない（画像がWPに登録してあるのを読みに行くため）
-  ☐ gzip
+  ☐ gzip→「nuxt-compress」が「generate」の際に有効にならない
   ☐ GAの設定
-  ☐ lazyimg
+  ☐ lazyimg,Lazysizes（スクロールに連動した画像の遅延読み込み？imgタグのlazy属性とはまた異なる？）
+  ☐ production時にconsoleを削除する（https://blog.35d.jp/2020-01-28-babel-console）
   ☐ asyncDataで描画した時とcreatedでタイミングを送らせて描画した時とのlighthouseのスコアの違い（後追いの描画nuxtだと実装楽。SEOに影響しないコンテンツなら積極的に利用してもいいかも。文章量が多い時に関連コンテンツのみを読み込ませる意味でSEO的に良い？もしくは描画コンテンツがサーバーとクライアントで違うということでNG？結局はGoogleがJSのレンダリングも認識してくれるようになれば考える必要ない？）
   ☐ SCSSのコンパイルをscopedで行えるようにする
   ☐ bootstrapカスタマイズ
@@ -18,6 +18,7 @@ TODO:
   ☐ 最後にVScodeまわりの修正あれば「00」のほうにコピーしておく
 
 Archive:
+  ✔ WPの画像最適化プラグイン試す（WebP形式試す。そのあとlighthouseのスコアの違い確認 ※SEOに影響出そうか）https://tekito-style.me/columns/wordpress-image-webp @done(20-11-05 07:46) @project(TODO)
   ✔ sitemapの作成 @done(20-11-05 04:37) @project(TODO)
   ✔ WPの子テーマ設定 @done(20-11-03 23:45) @project(TODO)
   ✔ WPのカスタム投稿「cat」設定 @done(20-11-03 23:45) @project(TODO)

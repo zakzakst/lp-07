@@ -60,6 +60,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/sitemap',
+    // 'nuxt-compress',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
