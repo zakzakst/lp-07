@@ -30,6 +30,9 @@ export default {
   components: {
     Gallery,
   },
+  mounted() {
+    console.log('index page');
+  },
   head() {
     const jsonld = {
       "@context": "http://schema.org",

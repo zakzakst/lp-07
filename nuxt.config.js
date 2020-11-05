@@ -1,6 +1,7 @@
 // 動的ルーティング用のデータ読み込み
 // const columnItems = require('./static/wp-json/column-items.json')
 import axios from 'axios'
+const pageUpdate = require('./static/data/page-update.json')
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -57,7 +58,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/sitemap',
     // 'nuxt-compress',
@@ -97,10 +98,24 @@ export default {
       lastmod: new Date()
     },
     routes: async () => {
-      const res = await axios.get(process.env.COLUMN_ITEMS_API);
-      return res.data.map(column => {
-        return '/column/' + column.id
+      // nuxtのページの更新日を取得
+      const pagesRoute = pageUpdate.map(page => {
+        return {
+          url: page.path,
+          lastmod: new Date(page.update)
+        }
       });
+      // nuxtの動的ルーティングページの更新日を取得
+      const columnsData = await axios.get(process.env.COLUMN_ITEMS_API);
+      const columnsRoute = columnsData.data.map(column => {
+        return {
+          url: '/column/' + column.id,
+          // lastmod: new Date(column.upDate + ' +0900'),
+          lastmod: new Date(column.update),
+        }
+      });
+      // 更新日の配列を結合して返す
+      return [].concat(pagesRoute, columnsRoute);
     }
   },
 }
