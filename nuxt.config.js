@@ -62,6 +62,7 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/sitemap',
     // 'nuxt-compress',
+    '@nuxtjs/google-analytics',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -124,5 +125,9 @@ export default {
       // 更新日の配列を結合して返す
       return [].concat(pagesRoute, columnsRoute);
     }
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
   },
 }

@@ -1,6 +1,4 @@
 TODO:
-  ☐ GAの設定
-  ☐ firebase hosting側で利用すればCDNみたいになるかもしれない（画像がWPに登録してあるのを読みに行くため）
   ☐ SCSSのコンパイルをscopedで行えるようにする
   ☐ bootstrapカスタマイズ
   ☐ PWAの実装確認
@@ -17,6 +15,8 @@ TODO:
   ☐ 最後にVScodeまわりの修正あれば「00」のほうにコピーしておく
 
 Archive:
+  ✔ firebase hosting側で利用すればCDNみたいになるかもしれない（画像がWPに登録してあるのを読みに行くため）→できた！！ @done(20-11-05 23:37) @project(TODO)
+  ✔ GAの設定 @done(20-11-05 23:17) @project(TODO)
   ✘ vscodeのもろもろの設定方法まとめる→別のリポジトリで対応する @cancelled(20-11-05 23:00) @project(TODO)
   ✘ lazyimg,Lazysizes（スクロールに連動した画像の遅延読み込み？imgタグのlazy属性とはまた異なる？） @cancelled(20-11-05 22:59) @project(TODO)
   ✔ production時にconsoleを削除する（https://blog.35d.jp/2020-01-28-babel-console） @done(20-11-05 23:06) @project(TODO)
