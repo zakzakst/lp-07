@@ -3,7 +3,6 @@
 import axios from 'axios'
 const pageUpdate = require('./static/data/page-update.json')
 import { parseFromTimeZone } from 'date-fns-timezone'
-const timeZone = 'Asia/Tokyo'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
