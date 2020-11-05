@@ -69,6 +69,13 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    terser: {
+      terserOptions: {
+        compress: {
+          drop_console: process.env.NODE_ENV === "production"
+        }
+      }
+    }
   },
 
   // 動的ルーティングの追加
