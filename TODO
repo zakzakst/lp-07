@@ -7,7 +7,6 @@ TODO:
 
 一旦保留:
   ☐ envファイル、テスト環境と出し分け
-  ☐ sitemapタイムゾーンを反映できない→（http://unageanu.hatenablog.com/entry/2015/05/10/151024）
   ☐ gzip→「nuxt-compress」が「generate」の際に有効にならない
 
 最後に対応:
@@ -15,6 +14,7 @@ TODO:
   ☐ 最後にVScodeまわりの修正あれば「00」のほうにコピーしておく
 
 Archive:
+  ✔ sitemapタイムゾーンを反映できない→（https://nju33.com/javascript/日本時間を取得）→「GMT」で時間をパースしたら解決 @done(20-11-06 00:43) @project(一旦保留)
   ✔ firebase hosting側で利用すればCDNみたいになるかもしれない（画像がWPに登録してあるのを読みに行くため）→できた！！ @done(20-11-05 23:37) @project(TODO)
   ✔ GAの設定 @done(20-11-05 23:17) @project(TODO)
   ✘ vscodeのもろもろの設定方法まとめる→別のリポジトリで対応する @cancelled(20-11-05 23:00) @project(TODO)
