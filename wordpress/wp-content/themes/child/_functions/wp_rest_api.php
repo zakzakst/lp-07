@@ -36,6 +36,7 @@ function format_cat_post_items($post) {
     'id' => $post->ID,
     'title' => $post->post_title,
     'date' => $post->post_date,
+    'update' => get_the_modified_date('Y-m-d H:i:s', $post->ID),
     'listText' => get_post_meta($post->ID, 'list_text', true),
     'categories' => $categories,
   );
@@ -75,6 +76,7 @@ function get_cat_post_item($args) {
     'id' => $post->ID,
     'title' => $post->post_title,
     'date' => $post->post_date,
+    'update' => get_the_modified_date('Y-m-d H:i:s', $post->ID),
     'content' => $post->post_content,
     'categories' => $categories,
     'description' => get_post_meta($post->ID, 'description', true),

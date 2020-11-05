@@ -1,7 +1,7 @@
 TODO:
-  ☐ firebase hosting側で利用すればCDNみたいになるかもしれない（画像がWPに登録してあるのを読みに行くため）
-  ☐ gzip→「nuxt-compress」が「generate」の際に有効にならない
   ☐ GAの設定
+  ☐ firebase hosting側で利用すればCDNみたいになるかもしれない（画像がWPに登録してあるのを読みに行くため）
+  ☐ vscodeのもろもろの設定方法まとめる
   ☐ lazyimg,Lazysizes（スクロールに連動した画像の遅延読み込み？imgタグのlazy属性とはまた異なる？）
   ☐ production時にconsoleを削除する（https://blog.35d.jp/2020-01-28-babel-console）
   ☐ asyncDataで描画した時とcreatedでタイミングを送らせて描画した時とのlighthouseのスコアの違い（後追いの描画nuxtだと実装楽。SEOに影響しないコンテンツなら積極的に利用してもいいかも。文章量が多い時に関連コンテンツのみを読み込ませる意味でSEO的に良い？もしくは描画コンテンツがサーバーとクライアントで違うということでNG？結局はGoogleがJSのレンダリングも認識してくれるようになれば考える必要ない？）
@@ -10,14 +10,20 @@ TODO:
   ☐ PWAの実装確認
   ☐ client-onlyの「fetch as google」「googleオプティマイズ」との兼ね合い調査
   ☐ 現在地情報の取得
-  ☐ ページ遷移時の「asyncData」内で「process.env」が挙動しない→一旦保留
-  ☐ envファイル、テスト環境と出し分け→一旦保留
+
+一旦保留:
+  ☐ envファイル、テスト環境と出し分け
+  ☐ sitemapタイムゾーンを反映できない→（http://unageanu.hatenablog.com/entry/2015/05/10/151024）
+  ☐ gzip→「nuxt-compress」が「generate」の際に有効にならない
 
 最後に対応:
   ☐ mixinsにまとめるスクリプトあるか検討
   ☐ 最後にVScodeまわりの修正あれば「00」のほうにコピーしておく
 
 Archive:
+  ✔ nuxtのpagesで書き出されるページのsitemapの更新日を設定できるようにする @done(20-11-05 22:46) @project(TODO)
+  ✔ WPに公開日・更新日の入力欄作成、サイトマップに更新日を反映できるようにする @done(20-11-05 22:28) @project(TODO)
+  ✔ ページ遷移時の「asyncData」内で「process.env」が挙動しない→一旦保留→「modules」に「dotenv」を設定していなかった @done(20-11-05 22:23) @project(TODO)
   ✔ WPの画像最適化プラグイン試す（WebP形式試す。そのあとlighthouseのスコアの違い確認 ※SEOに影響出そうか）https://tekito-style.me/columns/wordpress-image-webp @done(20-11-05 07:46) @project(TODO)
   ✔ sitemapの作成 @done(20-11-05 04:37) @project(TODO)
   ✔ WPの子テーマ設定 @done(20-11-03 23:45) @project(TODO)
