@@ -2,6 +2,8 @@
 // const columnItems = require('./static/wp-json/column-items.json')
 import axios from 'axios'
 const pageUpdate = require('./static/data/page-update.json')
+import { parseFromTimeZone } from 'date-fns-timezone'
+const timeZone = 'Asia/Tokyo'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -9,9 +11,9 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    // htmlAttrs: {
-    //   lang: 'ja'
-    // },
+    htmlAttrs: {
+      lang: 'ja'
+    },
     title: process.env.SITE_NAME,
     meta: [
       { charset: 'utf-8' },
@@ -110,7 +112,8 @@ export default {
       const pagesRoute = pageUpdate.map(page => {
         return {
           url: page.path,
-          lastmod: new Date(page.update)
+          // lastmod: new Date(page.update),
+          lastmod: parseFromTimeZone(page.update, { timeZone: 'GMT' }),
         }
       });
       // nuxtの動的ルーティングページの更新日を取得
@@ -118,8 +121,8 @@ export default {
       const columnsRoute = columnsData.data.map(column => {
         return {
           url: '/column/' + column.id,
-          // lastmod: new Date(column.upDate + ' +0900'),
-          lastmod: new Date(column.update),
+          // lastmod: new Date(column.update),
+          lastmod: parseFromTimeZone(column.update, { timeZone: 'GMT' }),
         }
       });
       // 更新日の配列を結合して返す
