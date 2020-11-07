@@ -1,7 +1,13 @@
 <template>
   <div>
+    <button
+      v-for="category in categories"
+      :key="category.id"
+      @click="setCategory(category.id)"
+    >{{ category.label }}</button>
     <ul>
-      <li v-for="item in columnItems" :key="item.id">
+      <li v-for="item in filteredColumnItems" :key="item.id">
+      <!-- <li v-for="item in columnItems" :key="item.id"> -->
         <nuxt-link :to="`/column/${item.id}`">
           {{ item.date }}：{{ item.listText }}
         </nuxt-link>
@@ -27,9 +33,36 @@ export default {
       title: 'コラム一覧',
       description: 'コラム一覧の概要',
       keywords: 'コラム一覧のキーワード1,コラム一覧のキーワード2',
+      category: 'all',
+      categories: [
+        {
+          id: 'all',
+          label: '全て',
+        },
+        {
+          id: 'event',
+          label: 'イベント',
+        },
+        {
+          id: 'blog',
+          label: 'ブログ',
+        },
+      ],
     }
   },
+  methods: {
+    setCategory(category) {
+      this.category = category;
+    },
+  },
   computed: {
+    filteredColumnItems() {
+      if (!this.columnItems.length || this.category === 'all') return this.columnItems;
+      const result = this.columnItems.filter(column => {
+        return column.categories.indexOf(this.category) !== -1;
+      });
+      return result;
+    },
     meta() {
       return {
         title: `${this.title} || ${process.env.SITE_NAME}`,
