@@ -1,7 +1,7 @@
 TODO:
-  ☐ 記事一覧の「もっと見る」ボタン
   ☐ SNSボタンコンポーネント
   ☐ メニューフロートボタン
+  ☐ 「nuxt generate」の時に500エラーになる
   ☐ PWAの実装確認
   ☐ client-onlyの「fetch as google」「googleオプティマイズ」との兼ね合い調査
   ☐ asyncDataで描画した時とcreatedでタイミングを送らせて描画した時とのlighthouseのスコアの違い（後追いの描画nuxtだと実装楽。SEOに影響しないコンテンツなら積極的に利用してもいいかも。文章量が多い時に関連コンテンツのみを読み込ませる意味でSEO的に良い？もしくは描画コンテンツがサーバーとクライアントで違うということでNG？結局はGoogleがJSのレンダリングも認識してくれるようになれば考える必要ない？）
@@ -15,6 +15,7 @@ TODO:
   ☐ 最後にVScodeまわりの修正あれば「00」のほうにコピーしておく
 
 Archive:
+  ✔ 記事一覧の「もっと見る」ボタン @done(20-11-08 17:31) @project(TODO)
   ✔ bootstrapカスタマイズ @done(20-11-08 16:10) @project(TODO)
   ✔ SCSSのコンパイルをscopedで行えるようにする @done(20-11-08 16:08) @project(TODO)
   ✔ 一覧ページのフィルター @done(20-11-08 05:03) @project(TODO)
@@ -52,5 +53,8 @@ Memo:
 
   ・Live Share使い方
   https://qiita.com/irico/items/b67328fdaa2d9a306cba
+
+  ・WordPress記事の複製
+  https://www.7-16.co.jp/laboratory/2567
 
   ■■■ 反省など ■■■

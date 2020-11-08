@@ -13,6 +13,7 @@ function add_rest_api_cat_post_items() {
 
 function get_cat_post_items() {
   $args = array(
+    'posts_per_page' => -1,
     'post_type' => 'cat',
     'post_status' => 'publish',
     'orderby' => 'date',
