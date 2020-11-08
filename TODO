@@ -1,6 +1,4 @@
 TODO:
-  ☐ SCSSのコンパイルをscopedで行えるようにする
-  ✔ bootstrapカスタマイズ @done(20-11-08 15:42)
   ☐ 記事一覧の「もっと見る」ボタン
   ☐ SNSボタンコンポーネント
   ☐ メニューフロートボタン
@@ -17,6 +15,8 @@ TODO:
   ☐ 最後にVScodeまわりの修正あれば「00」のほうにコピーしておく
 
 Archive:
+  ✔ bootstrapカスタマイズ @done(20-11-08 16:10) @project(TODO)
+  ✔ SCSSのコンパイルをscopedで行えるようにする @done(20-11-08 16:08) @project(TODO)
   ✔ 一覧ページのフィルター @done(20-11-08 05:03) @project(TODO)
   ✔ sitemapタイムゾーンを反映できない→（https://nju33.com/javascript/日本時間を取得）→「GMT」で時間をパースしたら解決 @done(20-11-06 00:43) @project(一旦保留)
   ✔ firebase hosting側で利用すればCDNみたいになるかもしれない（画像がWPに登録してあるのを読みに行くため）→できた！！ @done(20-11-05 23:37) @project(TODO)

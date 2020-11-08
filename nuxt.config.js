@@ -65,6 +65,7 @@ export default {
     '@nuxtjs/sitemap',
     // 'nuxt-compress',
     '@nuxtjs/google-analytics',
+    '@nuxtjs/style-resources',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -133,5 +134,11 @@ export default {
 
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID,
+  },
+
+  styleResources: {
+    scss: [
+      '@/assets/sass/_variables.scss'
+    ]
   },
 }

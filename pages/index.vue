@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="mb-10">test</p>
+    <p class="mb-10 test">test<span>aaa</span></p>
     <div class="container">
       <div class="row">
         <div class="col">1</div>
@@ -73,4 +73,13 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.test {
+  span {
+    color: #f00;
+  }
+  @include mq(lg) { // 引数を個別に指定
+    color: #00f;
+  }
+}
+</style>
