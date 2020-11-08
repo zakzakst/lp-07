@@ -1,0 +1,45 @@
+// オプション設定
+// https://v5.getbootstrap.jp/docs/5.0/customize/options/
+
+// グリッドのカスタマイズ
+$grid-gutter-width: 16px !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px
+);
+$container-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 960px
+);
+
+// スペースのカスタマイズ
+$spacer: 4px !default;
+$spacers: (
+  0: 0,
+  1: ($spacer),
+  2: ($spacer * 2),
+  3: ($spacer * 3),
+  4: ($spacer * 4),
+  5: ($spacer * 5),
+  6: ($spacer * 6),
+  7: ($spacer * 7),
+  8: ($spacer * 8),
+  9: ($spacer * 9),
+  10: ($spacer * 10),
+  11: ($spacer * 11),
+  12: ($spacer * 12)
+);
+
+// 共通利用SCSS
+@import "@/node_modules/bootstrap/scss/functions";
+@import "@/node_modules/bootstrap/scss/variables";
+@import "@/node_modules/bootstrap/scss/mixins";
+
+// 利用するSCSSの読み込み
+@import "@/node_modules/bootstrap/scss/bootstrap-reboot";
+@import "@/node_modules/bootstrap/scss/bootstrap-utilities";
+@import "@/node_modules/bootstrap/scss/bootstrap-grid";
+@import "@/node_modules/bootstrap/scss/containers";
