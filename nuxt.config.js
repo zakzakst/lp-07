@@ -46,6 +46,7 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     {src: '@/plugins/vue-image-lightbox', mode: 'client'},
+    {src: '~/plugins/vue-scrollto'},
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -66,6 +67,7 @@ export default {
     // 'nuxt-compress',
     '@nuxtjs/google-analytics',
     '@nuxtjs/style-resources',
+    'nuxt-svg-loader',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -80,7 +82,7 @@ export default {
         }
       }
     },
-    extractCSS: true,
+    // extractCSS: true,
   },
 
   // 動的ルーティングの追加

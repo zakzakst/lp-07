@@ -2,7 +2,7 @@
   <div>
     <Nuxt />
     <global-footer />
-    <!-- <float-btn /> -->
+    <float-btn />
   </div>
 </template>
 
@@ -22,4 +22,13 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss">
+.page-enter-active,
+.page-leave-active {
+  transition: opacity $transition-fast;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+</style>
