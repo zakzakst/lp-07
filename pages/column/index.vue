@@ -13,6 +13,7 @@
         </nuxt-link>
       </li>
     </ul>
+    <button v-if="addBtnIsActive" @click="addItems">add</button>
   </div>
 </template>
 
@@ -48,19 +49,43 @@ export default {
           label: 'ブログ',
         },
       ],
+      startItemsNum: 10,
+      currentItemsNum: 10,
+      addItemsNum: 5,
+      addBtnIsActive: false,
     }
   },
   methods: {
     setCategory(category) {
+      // 現在のカテゴリーと同じ場合は処理を止める
+      if (this.category === category) return;
+      // 表示数を初期化
+      this.currentItemsNum = this.startItemsNum;
+      // カテゴリーを変更
       this.category = category;
     },
+    addItems() {
+      this.currentItemsNum += this.addItemsNum;
+    }
   },
   computed: {
     filteredColumnItems() {
-      if (!this.columnItems.length || this.category === 'all') return this.columnItems;
-      const result = this.columnItems.filter(column => {
-        return column.categories.indexOf(this.category) !== -1;
-      });
+      let result;
+      // カテゴリーでフィルター
+      if (!this.columnItems.length || this.category === 'all') {
+        result = this.columnItems;
+      } else {
+        result = this.columnItems.filter(column => {
+          return column.categories.indexOf(this.category) !== -1;
+        });
+      }
+      // 表示数の反映
+      if (result.length > this.currentItemsNum) {
+        result = result.slice(0, this.currentItemsNum);
+        this.addBtnIsActive = true;
+      } else {
+        this.addBtnIsActive = false;
+      }
       return result;
     },
     meta() {
