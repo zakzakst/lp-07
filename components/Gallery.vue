@@ -1,11 +1,21 @@
 <template>
   <div>
     <template v-if="flickrData">
-      <div
-        v-for="(item, index) in flickrData"
-        :key="item.id"
-        :style="{backgroundImage: `url(${getFlickrImgURL(item, 'q')})`}"
-      >{{ item.id }} <button @click="showLightBox(index)">test</button></div>
+      <div class="row">
+        <div
+          v-for="(item, index) in flickrData"
+          :key="item.id"
+          class="col-6 col-md-4 col-lg-3 mb-4"
+        >
+          <div
+            class="gallery-item"
+            @click="showLightBox(index)"
+            :style="{backgroundImage: `url(${getFlickrImgURL(item, 'q')})`}"
+          >
+            <!-- <p class="sr-only">{{ getFlickrText(item) }}</p> -->
+          </div>
+        </div>
+      </div>
     </template>
     <client-only>
       <LightBox
@@ -49,7 +59,7 @@ export default {
         return {
           thumb: this.getFlickrImgURL(data, 'q'),
           src: this.getFlickrImgURL(data),
-          caption: `<a href="${this.getFlickrPageURL(data)}" target="_blank">this.getFlickrText(data)</a>`,
+          caption: `<a href="${this.getFlickrPageURL(data)}" target="_blank">${this.getFlickrText(data)}</a>`,
         }
       });
       return result;
@@ -95,4 +105,18 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.gallery-item {
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+}
+</style>
+
+<style lang="scss">
+.vue-lb-info a {
+  color: $color-text-light;
+}
+</style>

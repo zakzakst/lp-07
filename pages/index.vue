@@ -1,22 +1,25 @@
 <template>
   <div>
-    <p class="mb-10 test">test<span>aaa</span></p>
-    <div class="container">
-      <div class="row">
-        <div class="col">1</div>
-        <div class="col">1</div>
-        <div class="col">1</div>
+    <!-- 新着記事 -->
+    <section class="container py-4">
+      <h2 class="text-center mb-4">新着記事</h2>
+      <ul class="list">
+        <li v-for="item in filteredColumnItems" :key="item.id">
+          <nuxt-link :to="`/column/${item.id}`" class="list-item">
+            <span class="list-item__date">{{ item.date | dateFilter }}</span>
+            <span>{{ item.listText }}</span>
+          </nuxt-link>
+        </li>
+      </ul>
+      <div class="text-center">
+        <nuxt-link to="/column" class="btn btn-outline-dark">記事一覧</nuxt-link>
       </div>
-    </div>
-    <ul>
-      <li v-for="item in columnItems" :key="item.id">
-        <nuxt-link :to="`/column/${item.id}`">
-          {{ item.date }}：{{ item.listText }}
-        </nuxt-link>
-      </li>
-    </ul>
-    <nuxt-link to="/column">記事一覧</nuxt-link>
-    <!-- <gallery /> -->
+    </section>
+    <!-- ギャラリー -->
+    <section class="container py-4">
+      <h2 class="text-center mb-4">ギャラリー</h2>
+      <gallery />
+    </section>
   </div>
 </template>
 
@@ -38,6 +41,17 @@ export default {
   },
   components: {
     Gallery,
+  },
+  computed: {
+    filteredColumnItems() {
+      return this.columnItems.slice(0, 5);
+    }
+  },
+  filters: {
+    dateFilter(val) {
+      const date = new Date(val)
+      return date.toLocaleDateString();
+    },
   },
   head() {
     const jsonld = {
@@ -74,12 +88,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.test {
-  span {
-    color: #f00;
+.list {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  & > li {
+    border-bottom: 1px dotted #333;
+    &:first-child {
+      border-top: 1px dotted #333;
+    }
   }
-  @include mq(lg) { // 引数を個別に指定
-    color: #00f;
-  }
+}
+.list-item {
+  display: flex;
+  padding: 8px;
+  color: $color-text-default;
+  text-decoration: none;
+}
+.list-item__date {
+  width: 100px;
+  flex-shrink: 0;
 }
 </style>
