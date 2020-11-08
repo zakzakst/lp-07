@@ -1,12 +1,14 @@
 <template>
   <div>
     <Nuxt />
-    <float-btn />
+    <global-footer />
+    <!-- <float-btn /> -->
   </div>
 </template>
 
 <script>
 import FloatBtn from '@/components/FloatBtn'
+import GlobalFooter from '@/components/GlobalFooter'
 
 export default {
   // data () {
@@ -15,6 +17,7 @@ export default {
   // },
   components: {
     FloatBtn,
+    GlobalFooter,
   },
 }
 </script>
