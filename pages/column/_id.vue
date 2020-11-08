@@ -1,18 +1,26 @@
 <template>
   <div>
-    <p>{{ id }}</p>
-    <p>日付：{{ date }}</p>
-    <p>タイトル：{{ title }}</p>
-    <div v-html="content"></div>
-    <ul v-if="categories">
-      <li v-for="category in categories" :key="category">{{ category }}</li>
-    </ul>
-    <nuxt-link to="/">TOP</nuxt-link>
-    <nuxt-link to="/column">コラム一覧</nuxt-link>
-    <picture v-if="mainImg">
+    <picture v-if="mainImg" class="kv">
       <source type="image/webp" :srcset="`${mainImg}.webp`">
       <img :src="mainImg">
     </picture>
+    <picture v-else class="kv">
+      <img src="https://fakeimg.pl/1400x200/888/000/?text=NoImage">
+    </picture>
+    <div class="container mt-6">
+      <div class="mb-12 text-center">
+        <h1>{{ title }}</h1>
+        <p>最終更新日：{{ update | dateFilter }}</p>
+        <p v-if="categories">
+          <span
+            v-for="category in categories"
+            :key="category"
+            class="badge rounded-pill bg-dark mx-1 p-2"
+          >{{ category | categoryLabel }}</span>
+        </p>
+      </div>
+      <div v-html="content"></div>
+    </div>
   </div>
 </template>
 
@@ -25,9 +33,9 @@ export default {
     const res = await $axios.get(process.env.COLUMN_ITEM_API + params.id);
     return res.data;
   },
-  data() {
-    // return columnItemsDetail[this.$route.params.id]
-  },
+  // data() {
+  //   return columnItemsDetail[this.$route.params.id]
+  // },
   computed: {
     meta() {
       return {
@@ -56,6 +64,16 @@ export default {
   mixins: [
     mixinMeta,
   ],
+  filters: {
+    dateFilter(val) {
+      const date = new Date(val)
+      return date.toLocaleDateString();
+    },
+    categoryLabel(val) {
+      if (val === 'event') return 'イベント';
+      if (val === 'blog') return 'ブログ';
+    }
+  },
   head() {
     return this.getMeta();
     // headの内容を追加する場合
@@ -67,4 +85,19 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.kv {
+  position: relative;
+  display: block;
+  height: 200px;
+  overflow: hidden;
+  & > img {
+    position: absolute;
+    display: block;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+</style>
