@@ -1,5 +1,13 @@
 <template>
   <div>
+    <p class="mb-10">test</p>
+    <div class="container">
+      <div class="row">
+        <div class="col">1</div>
+        <div class="col">1</div>
+        <div class="col">1</div>
+      </div>
+    </div>
     <ul>
       <li v-for="item in columnItems" :key="item.id">
         <nuxt-link :to="`/column/${item.id}`">
@@ -7,7 +15,8 @@
         </nuxt-link>
       </li>
     </ul>
-    <gallery />
+    <nuxt-link to="/column">記事一覧</nuxt-link>
+    <!-- <gallery /> -->
   </div>
 </template>
 
@@ -48,6 +57,9 @@ export default {
       ]
     };
     return {
+      htmlAttrs: {
+        lang: 'ja'
+      },
       script: [
         {
           hid: 'jsonld',
