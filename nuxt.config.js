@@ -83,6 +83,9 @@ export default {
       }
     },
     // extractCSS: true,
+    transpile: [
+      'gsap',
+    ],
   },
 
   // 動的ルーティングの追加

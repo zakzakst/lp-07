@@ -1,7 +1,13 @@
 <template>
   <div>
-    <!-- 新着記事 -->
+    <!-- アンケート -->
     <section class="container py-4">
+      <h2 class="text-center mb-4">アンケート</h2>
+      <questionnaire />
+      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    </section>
+    <!-- 新着記事 -->
+    <!-- <section class="container py-4">
       <h2 class="text-center mb-4">新着記事</h2>
       <ul class="list">
         <li v-for="item in filteredColumnItems" :key="item.id">
@@ -14,18 +20,19 @@
       <div class="text-center">
         <nuxt-link to="/column" class="btn btn-outline-dark">記事一覧</nuxt-link>
       </div>
-    </section>
+    </section> -->
     <!-- ギャラリー -->
-    <section class="container py-4">
+    <!-- <section class="container py-4">
       <h2 class="text-center mb-4">ギャラリー</h2>
       <gallery />
-    </section>
+    </section> -->
   </div>
 </template>
 
 <script>
 // import columnItems from '@/static/wp-json/column-items.json';
 import Gallery from '@/components/Gallery'
+import Questionnaire from '@/components/Questionnaire'
 
 export default {
   async asyncData({ $axios }) {
@@ -41,6 +48,7 @@ export default {
   },
   components: {
     Gallery,
+    Questionnaire,
   },
   computed: {
     filteredColumnItems() {
