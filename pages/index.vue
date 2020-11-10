@@ -1,11 +1,21 @@
 <template>
   <div>
-    <!-- アンケート -->
+    <!-- 特長 -->
+    <!-- <section class="container py-4">
+      <h2 class="text-center mb-4">特長</h2>
+      <features />
+    </section> -->
+    <!-- アクション -->
     <section class="container py-4">
+      <h2 class="text-center mb-4">アクション</h2>
+      <actions />
+    </section>
+    <!-- アンケート -->
+    <!-- <section class="container py-4">
       <h2 class="text-center mb-4">アンケート</h2>
       <questionnaire />
       <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-    </section>
+    </section> -->
     <!-- 新着記事 -->
     <!-- <section class="container py-4">
       <h2 class="text-center mb-4">新着記事</h2>
@@ -31,8 +41,10 @@
 
 <script>
 // import columnItems from '@/static/wp-json/column-items.json';
-import Gallery from '@/components/Gallery'
+import Features from '@/components/Features'
+import Actions from '@/components/Actions'
 import Questionnaire from '@/components/Questionnaire'
+import Gallery from '@/components/Gallery'
 
 export default {
   async asyncData({ $axios }) {
@@ -47,8 +59,10 @@ export default {
     }
   },
   components: {
-    Gallery,
+    Features,
+    Actions,
     Questionnaire,
+    Gallery,
   },
   computed: {
     filteredColumnItems() {
