@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div style="height: 1000px"></div>
     <!-- 特長 -->
     <!-- <section class="container py-4">
       <h2 class="text-center mb-4">特長</h2>
@@ -11,13 +12,13 @@
       <actions />
     </section>
     <!-- アンケート -->
-    <!-- <section class="container py-4">
+    <section class="container py-4">
       <h2 class="text-center mb-4">アンケート</h2>
       <questionnaire />
       <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-    </section> -->
+    </section>
     <!-- 新着記事 -->
-    <!-- <section class="container py-4">
+    <section class="container py-4">
       <h2 class="text-center mb-4">新着記事</h2>
       <ul class="list">
         <li v-for="item in filteredColumnItems" :key="item.id">
@@ -30,12 +31,12 @@
       <div class="text-center">
         <nuxt-link to="/column" class="btn btn-outline-dark">記事一覧</nuxt-link>
       </div>
-    </section> -->
+    </section>
     <!-- ギャラリー -->
-    <!-- <section class="container py-4">
+    <section class="container py-4">
       <h2 class="text-center mb-4">ギャラリー</h2>
       <gallery />
-    </section> -->
+    </section>
   </div>
 </template>
 
@@ -63,6 +64,8 @@ export default {
     Actions,
     Questionnaire,
     Gallery,
+  },
+  methods: {
   },
   computed: {
     filteredColumnItems() {

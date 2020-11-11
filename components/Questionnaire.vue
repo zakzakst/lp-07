@@ -62,7 +62,7 @@ export default {
     animItems() {
       this.items.forEach(item => {
         gsap.to(item, {
-          duration: 2.5,
+          duration: 1,
           voteNum: item.vote,
           percent: item.vote / this.barMaxVal * 100,
           ease: 'power1.in',

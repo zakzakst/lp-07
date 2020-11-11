@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div style="height: 1000px"></div>
     <div ref="row1" class="row flex-md-row-reverse mb-8">
       <div class="img__wrapper col-md-4 py-12 py-md-0">
         <img ref="img1" class="img-1" src="img/top/action-01.png" alt="">
