@@ -1,11 +1,21 @@
 <template>
   <div>
-    <div style="height: 1000px"></div>
+    <div class="bg-dark text-light">
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="font-weight-light">タイトルが入ります</h1>
+            <p class="lead text-muted">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- <div style="height: 1000px"></div> -->
     <!-- 特長 -->
-    <!-- <section class="container py-4">
+    <section class="container py-12">
       <h2 class="text-center mb-4">特長</h2>
       <features />
-    </section> -->
+    </section>
     <!-- アクション -->
     <section class="container py-4">
       <h2 class="text-center mb-4">アクション</h2>
